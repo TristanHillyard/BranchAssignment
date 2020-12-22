@@ -19,31 +19,19 @@ namespace BranchAssignment
 
             Console.WriteLine("What is your package width?");
             int packageWidth = Convert.ToInt32(Console.ReadLine());
-            if(packageWidth > 50)
-            {
-                Console.WriteLine("Package too heavy to be shipped via Package Express.");
-                return;
-            }
-
-
+            
             Console.WriteLine("What is your package height?");
             int packageHeight = Convert.ToInt32(Console.ReadLine());
 
-            if (packageHeight > 50)
-            {
-                Console.WriteLine("Package is too heavy to be shipped via Package Express.");
-                return;
-            }
-
             Console.WriteLine("What is your package length?");
             int packageLength = Convert.ToInt32(Console.ReadLine());
- 
-            if (packageLength > 50)
+
+            if (packageWidth + packageLength + packageHeight > 50)
             {
-                Console.WriteLine("Package is too heavy to be shipped via Package Express.");
+                Console.WriteLine("Package is too big to be shipped via Package Express.");
                 return;
             }
-
+           
             double quote = packageHeight * packageWeight * packageLength / 100d;
             Console.WriteLine("Your estimated total for shipping this package is: $" + quote);
 
