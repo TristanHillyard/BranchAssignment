@@ -32,7 +32,7 @@ namespace BranchAssignment
                 return;
             }
            
-            double quote = packageHeight * packageWeight * packageLength / 100d;
+            double quote = packageHeight * packageWeight * packageLength * packageWidth / 100d;
             Console.WriteLine("Your estimated total for shipping this package is: $" + quote);
 
             Console.WriteLine("Thank you!");
